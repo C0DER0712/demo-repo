@@ -1,20 +1,20 @@
-import collections
+#failed code :(
 t=int(input())
 for i in range(t):
     n=int(input())
     l=list(map(int,input().split()))
-    hashh=collections.defaultdict(list)
+    hashh={}
     for j in range(n):
-        hashh[l[j]].append(j)
+        hashh[l[j]]=j
     p=0;ind=1;lis=[]
     h=max(l)
     while len(hashh)>1:
         for k in hashh:
-            mi=hashh[k][-1]
+            mi=hashh[k]
             break
         for k1 in hashh:
-            if mi>hashh[k1][-1]:
-                mi=hashh[k1][-1]
+            if mi>hashh[k1]:
+                mi=hashh[k1]
         max1=0;min1=h;f=0
         for m in range(p,mi+1):
             if ind%2==1:
